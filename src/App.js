@@ -1,5 +1,9 @@
+import React, {useState} from 'react';
+import Format from './Format';
+
 function App() {
-  return <h1>Lotion</h1>;
+  const [] = useState([])
+  return <Format/>;
 }
 
 export default App;
