@@ -17,6 +17,48 @@ a {
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+html{
+  height: 100%;
+}
+.screen{
+  height: 100%;
+}
+.area-container {
+  display:flex;
+  height: 100%;
+  min-height: 100%;
+  flex-direction: row;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.notes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.notes-storing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+.middle {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 2px solid #ccc;
+  align-items: center;
+  
 }
 .top-bar {
   display: flex;
@@ -24,47 +66,34 @@ body {
   justify-content: space-between;
   border-bottom: 2px solid #ccc;
   text-align: center;
-  
 }
+
 .title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* flex-grow: 1; */
-/*     
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 70vw;
-  text-align: center;*/
-
 }
 
 .top-bar-title{
   background-color: #fff;
   color: #333;
   padding-top: 10px;
-  text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   font-family: Sans-serif;
-  justify-self: flex-start;
-  display:inline-block;
 }
-/*
+
 .top-bar-sub {
   background-color: #fff;
   color: #6b6a6a;
   padding-bottom: 10px;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   font-family: Sans-serif;
 }
-*/
 
 #sidebutton {
-  align-self: flex-start;
   width: 50px;
   height: 50px;
   margin-left: 20px;
