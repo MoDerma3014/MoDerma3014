@@ -23,11 +23,10 @@ html{
   height: 100%;
 }
 .screen{
-  height: 100%;
+  height: 100vh;
 }
 .area-container {
   display:flex;
-  height: 100%;
   min-height: 100%;
   flex-direction: row;
 }
@@ -56,7 +55,7 @@ html{
   flex: 4;
   flex-direction: column;
   justify-content: center;
-  border-left: 2px solid #ccc;
+  border-left: 2px solid #e4e4e4;
   align-items: center;
   
 }
@@ -64,7 +63,7 @@ html{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #e4e4e4;
   text-align: center;
 }
 
@@ -74,8 +73,7 @@ html{
   align-items: center;
 }
 
-.top-bar-title{
-  background-color: #fff;
+#top-bar-title{
   color: #333;
   padding-top: 10px;
   font-size: 40px;
@@ -83,8 +81,7 @@ html{
   font-family: Sans-serif;
 }
 
-.top-bar-sub {
-  background-color: #fff;
+#top-bar-sub {
   color: #6b6a6a;
   padding-bottom: 10px;
   text-align: center;
@@ -98,4 +95,340 @@ html{
   height: 50px;
   margin-left: 20px;
   margin-top: 20px;
+}
+
+.plus-button {
+  font-size: 30px;
+  width:80px;
+  font-weight: bold;
+}
+.hidden{
+  visibility:hidden;
+}
+.showed {
+  visibility: visible;
+}
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1000;
+}
+
+.header-input {
+  border: none !important;
+  outline: none;
+  flex: 1;
+  margin-right: 20px;
+  padding: 25px;
+}
+.header-buttons {
+  display: flex;
+}
+.note-date{
+  display: flex;
+  flex-direction: column;
+}
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.preview-title {
+  padding: 25px;
+  padding-bottom: 0px;
+  margin: 0;
+  width: 86%;
+}
+
+#timestamp {
+  border: none !important;
+  outline: none;
+  color: #999;
+  margin:0;
+  font-size: 15px;
+  padding: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#title.header-input {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 25px;
+  font-size: 25px;
+  font-family: inherit;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.App {
+  display: flex;
+}
+
+
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px;
+  padding-left: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-sidebar-header h1 {
+  margin: 0;
+}
+
+.app-sidebar-notes {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.app-sidebar-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.sidebar-note-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+}
+
+.app-sidebar-note p {
+  margin: 10px 0;
+}
+
+.time-choosing {
+  display: flex;
+  flex-direction: row;
+}
+#start {
+  padding: 0px;
+  border: 0px;
+  font-size: 15px;
+  color:#999;
+}
+.app-sidebar-note small {
+  padding-top: 5px;
+  color: #999;
+}
+
+.app-sidebar-note:hover {
+  background: #ddd;
+}
+
+.app-sidebar-note.active,
+.app-sidebar-note.active small {
+  background: rgb(51, 46, 79);
+  color: white;
+}
+
+#app-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.app-main-note-edit,
+.app-main-note-preview {
+  height: 50vh;
+}
+
+.no-active-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100vh;
+  font-size: 2rem;
+  color: #999;
+}
+
+.app-main-note-edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main-note-edit input {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  width: 100%;
+  height: calc(50vh - 130px);
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.app-main-note-edit input {
+  height: 50px;
+  font-size: 2rem;
+}
+
+.app-main-note-preview {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ddd;
+  overflow-y: auto;
+  height: 990px;
+  flex: 1;
+}
+
+
+
+.markdown-preview {
+  padding: 0 25px 25px 25px;
+  font-size: 1rem;
+  line-height: 2rem;
+  word-wrap: break-word;
+}
+
+.head {
+  padding: 0 25px;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.editor-toolbar button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.editor-toolbar select {
+  margin-right: 8px;
+}
+
+.editor-toolbar button.active {
+  background-color: #e6e6e6;
+}
+
+
+
+button.tools-edit {
+  background: none;
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 25px;
+  padding-bottom: 5px;
+  font-size: 25px;
+  font-family: inherit;
+  transition-duration: 0.4s;
+}
+
+button.tools-edit:hover {
+  background: rgb(51, 46, 79);
+  color: white;
+  padding: 26px;
+}
+
+button:hover {
+  background: rgb(51, 46, 79);
+  color: white;
+  padding: 26px;
+}
+
+
+button.tools-preview {
+  background: none;
+  margin: 0;
+  padding: 25px;
+  font-size: 25px;
+  font-family: inherit;
+  transition-duration: 0.4s;
+}
+
+button.tools-preview:hover {
+  background: rgb(51, 46, 79);
+  color: white;
+  padding: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .app-main {
+    width: 100%;
+    height: 63%;
+    overflow-y: auto;
+  }
+
+  .no-active-note {
+    width: 100%;
+  }
+
+  .preview-title {
+    width: 100%;
+  }
 }
