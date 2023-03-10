@@ -5,9 +5,9 @@ import 'react-quill/dist/quill.snow.css';
 
 
 
-function NoteEditor({ activeNote, onUpdateNote, onPreviewNote, onDeleteNote, sidebarOpen }) {
+function NoteEditor({ activeNote, onUpdateNote, onPreviewNote, onDeleteNote}) {
     const navigate = useNavigate();
-    const [lastModified,setLastModified] = useState(activeNote ? activeNote.lastModified : null);
+    const [setLastModified] = useState(activeNote ? activeNote.lastModified : null);
 
     const noteBody = activeNote.body || '';
 
