@@ -247,6 +247,7 @@ button {
 
 .time-choosing {
   display: flex;
+  justify-content: flex-start;
   flex-direction: row;
 }
 #start {
@@ -254,6 +255,8 @@ button {
   border: 0px;
   font-size: 15px;
   color:#999;
+  padding-left: 25px;
+  width:190px;
 }
 .app-sidebar-note small {
   padding-top: 5px;
@@ -286,7 +289,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   height: 100vh;
   font-size: 2rem;
   color: #999;

@@ -25,12 +25,15 @@ function NoteViewer({ activeNote, onDeleteNote, onEditNote }) {
         <div className="note-date">
           <h1 className="preview-title">{activeNote.title}</h1>
           <div id="timestamp">
-            {activeNote && new Date(activeNote.lastModified).toLocaleDateString("en-GB", {
+            {activeNote && new Date(activeNote.lastModified).toLocaleDateString("en-US", {
+              year: 'numeric',
+              month: 'numeric',
+              day: '2-digit',
               hour: "numeric",
               minute: "2-digit",
               hour12: true,
               hourCycle: "h24"
-            }).toLocaleUpperCase()}
+            })}
           </div>
         </div>
         <div className="header-buttons">
